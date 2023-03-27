@@ -1,0 +1,453 @@
+/*
+WP Associate Post 影(skin-shadow.css)
+*/
+
+/* 共通 
+--------------------------- */
+
+.wpap-tpl p {
+	line-height: 1.4 !important;
+}
+
+.wpap-tpl .wpap-image img {
+	border: none;
+	text-decoration: none;
+}
+
+/* With 標準【デザイン共通】
+--------------------------- */
+
+.wpap-tpl-with-detail {
+	display: block;
+	margin: 1.5em 0;
+	padding: 1em 1em 2em;
+	font-size: 14px;
+	line-height: 1.2;
+	max-width: 600px;
+	position: relative;
+	background-color: #fff;
+	color: #222 !important;
+	text-decoration: none;
+	border: 1px solid #ccc !important;
+	border-radius: 3px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.wpap-tpl-with-detail .wpap-title a {
+	color: #222;
+	text-decoration: none;
+}
+
+.wpap-tpl-with-detail .wpap-title a:hover {
+	text-decoration: underline;
+}
+
+.wpap-tpl-with-detail .wpap-image {
+	margin-right: 15px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+.wpap-tpl-with-detail .wpap-image img {
+	display: block;
+	width: auto;
+	height: auto;
+	max-width: 120px;
+	max-height: 120px;
+}
+
+.wpap-tpl-with-detail .wpap-title {
+	margin-top: 0;
+	margin-bottom: 5px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.wpap-tpl-with-detail .wpap-creator {
+	margin-top: 5px;
+}
+
+.wpap-tpl-with-detail .wpap-price {
+	color: #b12704;
+	font-size: 16px;
+}
+
+.wpap-tpl-with-detail .wpap-release {
+	margin-top: 5px;
+	font-size: 12px;
+}
+
+.wpap-tpl-with-detail .wpap-date {
+	color: #555;
+	font-size: 12px;
+}
+
+.wpap-tpl-with-detail .wpap-link {
+	font-size: 14px;
+	margin: 10px 0 5px;
+	display: flex;
+}
+
+.wpap-tpl-with-detail .wpap-link a {
+	display: inline-block;
+	color: #fff !important;
+	padding: 4px 8px;
+	text-decoration: none !important;
+	font-size: 13px;
+}
+
+@media screen and (max-width: 767px) {
+	.wpap-tpl-with-detail .wpap-link {
+		clear: both;
+	}
+
+	.wpap-tpl-with-detail .wpap-link a {
+		width: 50%;
+		text-align: center;
+		display: flex;
+		padding: 6px 6px;
+	}
+
+	.wpap-tpl-with-detail .wpap-link a span {
+		margin: 0 auto;
+	}
+}
+
+.wpap-tpl-with-detail .wpap-link a {
+	margin-right: 3px;
+}
+
+.wpap-tpl-with-detail .wpap-link a:last-child {
+	margin-right: 0px;
+}
+
+.wpap-tpl-with-detail .wpap-link a.wpap-link-amazon {
+	background: #f89400;
+}
+
+.wpap-tpl-with-detail .wpap-link a.wpap-link-rakuten {
+	background: #be0000;
+}
+
+.wpap-tpl-with-detail .wpap-link a.wpap-link-yahoo {
+	background: #D14615;
+}
+
+.wpap-tpl-with-detail .wpap-note {
+	position: absolute;
+	right: 1em;
+	bottom: 1em;
+	font-size: 11px;
+	color: #555;
+}
+
+/* With 画像・テキスト（横）
+--------------------------- */
+
+.wpap-tpl-with-image-text-h {
+	overflow: hidden; /* clearfix */
+	zoom: 1; /* clearfix */
+}
+
+.wpap-tpl-with-image-text-h .wpap-title {
+	margin-bottom: 5px;
+}
+
+.wpap-tpl-with-image-text-h .wpap-image {
+	float: left;
+	margin: 0 10px 20px 0;
+}
+
+.wpap-tpl-with-image-text-h .wpap-image img {
+	max-width: 140px;
+	border-radius: 10px;
+	box-shadow: 0 25px 30px -20px #666;
+}
+
+.wpap-tpl-with-image-text-h .wpap-link {
+	font-size: 14px;
+	margin: 10px 0 5px;
+}
+
+.wpap-tpl-with-image-text-h .wpap-link a {
+	display: inline-block;
+	color: #fff;
+	padding: 4px 8px;
+	text-decoration: none;
+	font-size: 13px;
+}
+
+@media screen and (max-width: 767px) {
+	.wpap-tpl-with-image-text-h .wpap-link {
+		clear: both;
+		display: flex;
+	}
+	.wpap-tpl-with-image-text-h .wpap-link a {
+		display: flex;
+		text-align: center;
+		width: 50%;
+		margin-bottom: 6px;
+		padding: 6px 6px;
+		margin-right: 3px;
+	}
+	.wpap-tpl-with-image-text-h .wpap-link a:last-child {
+		margin-right: 0px;}
+
+	.wpap-tpl-with-image-text-h .wpap-link a span {
+		margin: 0 auto;
+	}
+}
+
+.wpap-tpl-with-image-text-h .wpap-link a {
+	margin-right: 3px;
+}
+
+.wpap-tpl-with-image-text-h .wpap-link a:last-child {
+	margin-right: 0px;
+}
+
+.wpap-tpl-with-image-text-h .wpap-link a.wpap-link-amazon {
+	background: #f89400;
+}
+
+.wpap-tpl-with-image-text-h .wpap-link a.wpap-link-rakuten {
+	background: #be0000;
+}
+
+.wpap-tpl-with-image-text-h .wpap-link a.wpap-link-yahoo {
+	background: #D14615;
+}
+
+/* With 画像・テキスト（縦）
+--------------------------- */
+
+.wpap-tpl-with-image-text-v .wpap-image {
+	margin-bottom: 20px;
+}
+
+.wpap-tpl-with-image-text-v .wpap-image a {
+	text-align: center;
+	display: block;
+}
+
+.wpap-tpl-with-image-text-v .wpap-image a:link,
+.wpap-tpl-with-image-text-v .wpap-image a:hover {
+	border: none;
+	text-decoration: none;
+	box-shadow: none;
+}
+
+.wpap-tpl-with-image-text-v .wpap-image img {
+	display: inline-block;
+	border-radius: 10px;
+	box-shadow: 0 25px 30px -20px #666;
+}
+
+.wpap-tpl-with-image-text-v .wpap-title {
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.wpap-tpl-with-image-text-v .wpap-link {
+	text-align: center;
+	font-size: 14px;
+	margin: 10px 0 0;
+}
+
+.wpap-tpl-with-image-text-v .wpap-link a {
+	display: inline-block;
+	color: #fff;
+	padding: 4px 8px;
+	text-decoration: none;
+	font-size: 13px;
+}
+
+@media screen and (max-width: 767px) {
+	.wpap-tpl-with-image-text-v .wpap-link {
+		display: flex;
+	}
+
+	.wpap-tpl-with-image-text-v .wpap-link a {
+		width: 50%;
+		text-align: center;
+		display: flex;
+		padding: 6px 6px;
+	}
+
+	.wpap-tpl-with-image-text-v .wpap-link a span {
+		margin: 0 auto;
+	}
+}
+
+.wpap-tpl-with-image-text-v .wpap-link a {
+	margin-right: 3px;
+}
+.wpap-tpl-with-image-text-v .wpap-link a:last-child {
+	margin-right: 0px;
+}
+
+.wpap-tpl-with-image-text-v .wpap-link a.wpap-link-amazon {
+	background: #f89400;
+}
+
+.wpap-tpl-with-image-text-v .wpap-link a.wpap-link-rakuten {
+	background: #be0000;
+}
+
+.wpap-tpl-with-image-text-v .wpap-link a.wpap-link-yahoo {
+	background: #D14615;
+}
+
+/* 標準【デザイン共通】
+--------------------------- */
+
+.wpap-tpl-detail {
+	margin: 1.5em 0;
+	font-size: 14px;
+	line-height: 1.2;
+	max-width: 600px;
+}
+
+.wpap-tpl-detail .wpap-link,
+.wpap-tpl-detail .wpap-link:hover {
+	position: relative;
+	display: block;
+	background: #fff;
+	padding: 1em 1em 2em;
+	color: #222 !important;
+	border: 1px solid #ccc !important;
+	text-decoration: none;
+	overflow: hidden;
+	border-radius: 3px;
+	box-sizing: border-box;
+	box-shadow: 0 1px 0 0 #555;
+}
+
+.wpap-tpl-detail .wpap-link:hover {
+	box-shadow: none;
+}
+
+.wpap-tpl-detail .wpap-title,
+.wpap-tpl-detail .wpap-title:hover {
+	margin-top: 0;
+	margin-bottom: 5px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.wpap-tpl-detail .wpap-creator {
+	margin-top: 5px;
+}
+
+.wpap-tpl-detail .wpap-price {
+	color: #b12704;
+	font-size: 16px;
+}
+
+.wpap-tpl-detail .wpap-release {
+	margin-top: 5px;
+	font-size: 12px;
+}
+
+.wpap-tpl-detail .wpap-service {
+	position: absolute;
+	right: 1em;
+	bottom: 1em;
+	font-size: 11px;
+	color: #555;
+}
+
+.wpap-tpl-detail .wpap-date {
+	color: #555;
+	font-size: 12px;
+}
+
+.wpap-tpl-detail .wpap-image {
+	margin-right: 15px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+.wpap-tpl-detail .wpap-image img {
+	display: block;
+	width: auto;
+	height: auto;
+	max-width: 120px;
+	max-height: 120px;
+}
+
+/* 画像・テキスト（横）
+--------------------------- */
+
+.wpap-tpl-image-text-h {
+	overflow: hidden; /* clearfix */
+	zoom: 1; /* clearfix */
+}
+
+.wpap-tpl-image-text-h .wpap-image {
+	float: left;
+	margin: 0 10px 20px 0;
+}
+
+.wpap-tpl-image-text-h .wpap-image img {
+	max-width: 140px;
+	border-radius: 10px;
+	box-shadow: 0 25px 30px -20px #666;
+}
+
+/* 画像・テキスト（縦）
+--------------------------- */
+
+.wpap-tpl-image-text-v .wpap-image {
+	margin-bottom: 20px;
+}
+
+.wpap-tpl-image-text-v .wpap-image a {
+	text-align: center;
+	display: block;
+}
+
+.wpap-tpl-image-text-v .wpap-image a:link,
+.wpap-tpl-image-text-v .wpap-image a:hover {
+	border: none;
+	text-decoration: none;
+	box-shadow: none;
+}
+
+.wpap-tpl-image-text-v .wpap-image img {
+	display: inline-block;
+	border-radius: 10px;
+	box-shadow: 0 25px 30px -20px #666;
+}
+
+.wpap-tpl-image-text-v .wpap-title {
+	text-align: center;
+}
+
+/* 画像のみ
+--------------------------- */
+
+.wpap-tpl-image .wpap-image a {
+	text-align: center;
+	display: block;
+}
+
+.wpap-tpl-image .wpap-image a:link,
+.wpap-tpl-image .wpap-image a:hover {
+	border: none;
+	text-decoration: none;
+	box-shadow: none;
+}
+
+.wpap-tpl-image .wpap-image img {
+	display: inline-block;
+	border-radius: 10px;
+	box-shadow: 0 25px 30px -20px #666;
+}
+
+/* テキストのみ
+--------------------------- */
+
+.wpap-tpl-text {
+}

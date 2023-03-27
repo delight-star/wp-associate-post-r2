@@ -1,0 +1,61 @@
+.wpap-option-edit h2,
+.wpap-option-edit h3 {
+	padding: 1em 0.8em;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	background: #dedede;
+}
+
+.wpap-option-edit input[type="checkbox"] {
+	width: 26px;
+	height: 26px;
+}
+
+.wpap-option-edit input[type="checkbox"]:checked:before {
+	font-size: 2.2em;
+	width: 1em;
+}
+
+.wpap-option-edit input[type="text"],
+select,
+textarea {
+	padding: 0.8em;
+	border-radius: 5px;
+}
+
+.wpap-option-edit label {
+	font-size: 1.1em;
+	border: 1px solid transparent;
+	font-weight: bold;
+	padding: 0.5em;
+}
+
+.wpap-option-edit label:hover {
+	border: 1px solid #cdcdcd;
+	background: #dfdfdf;
+	border-radius: 6px;
+}
+
+.wpap-option-tool {
+	margin: 30px 0;
+	border: 1px solid #bbb;
+}
+
+.wpap-option-tool h2 {
+	margin: 0;
+	padding: 15px;
+	border-bottom: 1px solid #bbb;
+	background-color: #dedede;
+}
+
+.wpap-option-tool .wpap-option-tool-inner {
+	margin: 15px;
+}
+
+.wpap-credit {
+	text-align: right;
+}
+
+.wpap-orange {
+	color: #e95b1d;
+}

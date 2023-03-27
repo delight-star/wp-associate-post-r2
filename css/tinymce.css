@@ -1,0 +1,19 @@
+.mce-content-body .mce-wp-associate-post-r2-tag {
+	border: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	width: 100%;
+	height: 0 !important;
+	display: block;
+	margin: 0 auto;
+	padding-top: 25% !important;
+	outline: 0;
+	cursor: default;
+	background: transparent url( ../images/editor.png ) no-repeat scroll 0 0;
+	background-size: contain;
+}
+
+.mce-content-body span[data-wpap-service] {
+	color: #0000ff;
+	text-decoration: underline;
+}

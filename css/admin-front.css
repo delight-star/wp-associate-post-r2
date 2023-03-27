@@ -1,0 +1,14 @@
+.wpap-error{
+	border: 1px solid #900;
+}
+.wpap-error span{
+	padding: 0em 1em;
+	background-color: #900;
+	display: block;
+	color: #fff;
+}
+.wpap-error p {
+	padding: 0.5em 1em;
+	margin: 0;
+	color: #900;
+	background-color: #f2dede;}
