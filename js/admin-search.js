@@ -190,8 +190,11 @@
 		});
 
 		$( document ).on( 'mouseenter', '.wpap-link-rakuten, .wpap-link-yahoo', function() {
-			$( this ).closest( '.display-preview' )
-				.append( '<div class="wpap-balloon"><p>' + wpapSearch.i18n.balloonRakutenAndYahooLinks + '</p></div>' );
+			var label = parent.wp.i18n.__(
+				'In order to improve operating speed, Rakuten and Yahoo links can not be clicked from the preview screen.',
+				'wp-associate-post-r2'
+			);
+			$( this ).closest( '.display-preview' ).append( '<div class="wpap-balloon"><p>' + label + '</p></div>' );
 		}).on( 'mouseleave', '.wpap-link-rakuten, .wpap-link-yahoo', function() {
 			$( this ).closest( '.display-preview' ).find( '.wpap-balloon' )
 				.fadeOut()
