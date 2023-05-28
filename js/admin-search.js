@@ -35,9 +35,9 @@
 		if ( isGutenberg ) {
 			var wpData = parent.wp.data,
 				wpBlocks = parent.wp.blocks,
-				selectedBlockId = wpData.select( 'core/editor' ).getSelectedBlockClientId();
+				selectedBlockId = wpData.select( 'core/block-editor' ).getSelectedBlockClientId();
 
-			wpData.dispatch( 'core/editor' ).replaceBlock(
+			wpData.dispatch( 'core/block-editor' ).replaceBlock(
 				selectedBlockId,
 				wpBlocks.createBlock(
 					'wp-associate-post-r2/product',
