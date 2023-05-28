@@ -2,7 +2,7 @@
 WP Associate Post 円(skin-circle.css)
 */
 
-/* 共通 
+/* 共通
 --------------------------- */
 
 .wpap-tpl p {
@@ -16,7 +16,6 @@ WP Associate Post 円(skin-circle.css)
 
 .object-fit {
 	object-fit: cover;
-	font-family: 'object-fit: cover;';
 }
 
 /* With 標準【デザイン共通】
@@ -314,7 +313,7 @@ WP Associate Post 円(skin-circle.css)
 	background: #D14615;
 }
 
-/* 標準【デザイン共通】 
+/* 標準【デザイン共通】
 --------------------------- */
 
 .wpap-tpl-detail {

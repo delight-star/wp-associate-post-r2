@@ -143,8 +143,6 @@ class Main {
 		if ( 1 == $option_click_tracking ) {
 			wp_enqueue_script( 'wpap-click-tracking', WPAP_PLUGIN_URL . 'js/click-tracking.js', array( 'jquery' ), null, true );
 		}
-		wp_enqueue_script( 'object-fit-images', WPAP_PLUGIN_URL . 'js/ofi.min.js', array(), null, true );
-		wp_enqueue_script( 'wpap-common', WPAP_PLUGIN_URL . 'js/common.js', array( 'object-fit-images' ), null, true );
 
 		if ( is_user_logged_in() && current_user_can( 'publish_posts' ) ) {
 			wp_enqueue_style( 'wpap-admin-front', WPAP_PLUGIN_URL . 'css/admin-front.css', array(), WPAP_VERSION );
