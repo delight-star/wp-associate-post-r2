@@ -8,7 +8,6 @@ Version:     4.2
 Author:      Delight Star Inc.
 Author URI:  https://delight-star.co.jp/
 License:     GPLv2
-Text Domain: wp-associate-post-r2
 */
 
 namespace WP_Associate_Post_R2;

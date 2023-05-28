@@ -17,7 +17,6 @@ class Main {
 	public $service = array();
 
 	public function __construct() {
-		add_action( 'plugins_loaded', array( $this, 'load_textdomain' ) );
 		$this->option = get_option( WPAP_ID, array() );
 		$this->cache  = new Cache();
 
@@ -79,10 +78,6 @@ class Main {
 				'render_callback' => array($this, 'gutenberg_callback'),
 			));
 		}
-	}
-
-	public function load_textdomain() {
-		load_plugin_textdomain( 'wp-associate-post-r2' );
 	}
 
 	public function init() {
@@ -152,29 +147,18 @@ class Main {
 	public function admin_enqueue( $hook ) {
 		if ( 'settings_page_' . WPAP_ID === $hook ) {
 			wp_enqueue_style( 'wpap-admin-option', WPAP_PLUGIN_URL . 'css/admin-option.css', array(), WPAP_VERSION );
-			wp_enqueue_script( 'wpap-admin-option', WPAP_PLUGIN_URL . 'js/admin-option.js', array( 'jquery' ), WPAP_VERSION, true );
+			wp_enqueue_script( 'wpap-admin-option', WPAP_PLUGIN_URL . 'js/admin-option.js', array( 'wp-i18n', 'jquery' ), WPAP_VERSION, true );
 			wp_localize_script( 'wpap-admin-option', 'wpapOption', array(
 				'ajaxURL'       => admin_url( 'admin-ajax.php' ),
 				'nonce'         => wp_create_nonce( 'wpap_cache_clear' ),
 				'loadingImgURL' => WPAP_PLUGIN_URL . 'images/loading_mini.gif',
-				'i18n'          => array(
-					'clearingCache'         => __( 'Clearing the cache... Please wait a moment.', 'wp-associate-post-r2' ),
-					'communicationError'    => __( 'A communication error occurred. Please try again in a moment.', 'wp-associate-post-r2' ),
-					'importFileNotSelected' => __( 'File not selected.', 'wp-associate-post-r2' ),
-					'importConfirm'         => __( 'The setting will be overridden. If you select the wrong file, the setting may be corrupt or disappear, so please verify you have selected the correct file. Are you sure you want to import?', 'wp-associate-post-r2' ),
-				),
 			) );
 		} elseif ( 'media-upload-popup' === $hook && isset( $_GET['tab'] ) && preg_match( '/^(' . WPAP_ID_ABBR . '_)/', $_GET['tab'] ) ) {
 			wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css', array(), null );
 			wp_enqueue_style( 'wpap-admin-search', WPAP_PLUGIN_URL . 'css/admin-search.css', array( 'font-awesome' ), WPAP_VERSION );
 			wp_enqueue_script( 'jquery-pjax', WPAP_PLUGIN_URL . 'js/jquery.pjax.min.js', array( 'jquery' ), null, true );
-			wp_enqueue_script( 'wpap-admin-search', WPAP_PLUGIN_URL . 'js/admin-search.js', array( 'jquery', 'jquery-pjax' ), WPAP_VERSION, true );
-			wp_localize_script( 'wpap-admin-search', 'wpapSearch', array(
-				'isGutenberg' => $this->is_gutenberg_active(),
-				'i18n' => array(
-					'balloonRakutenAndYahooLinks' => __( 'In order to improve operating speed, Rakuten and Yahoo links can not be clicked from the preview screen.', 'wp-associate-post-r2' ),
-					),
-				) );
+			wp_enqueue_script( 'wpap-admin-search', WPAP_PLUGIN_URL . 'js/admin-search.js', array( 'wp-i18n', 'jquery', 'jquery-pjax' ), WPAP_VERSION, true );
+			wp_localize_script( 'wpap-admin-search', 'wpapSearch', array( 'isGutenberg' => $this->is_gutenberg_active() ) );
 			$this->enqueue();
 		} elseif ( in_array( $hook, array( 'post.php', 'post-new.php' ), true ) ) {
 			wp_enqueue_style( 'wpap-admin-post', WPAP_PLUGIN_URL . 'css/admin-post.css', array(), WPAP_VERSION );

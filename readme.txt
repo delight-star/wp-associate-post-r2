@@ -1,7 +1,7 @@
 === WP Associate Post R2 ===
 Contributors: delightstar, satonyan, cibea
 Tags: affiliate, amazon, rakuten, yahoo, media, post, links
-Requires at least: 4.5
+Requires at least: 4.6
 Tested up to: 5.3
 Requires PHP: 5.6
 Stable tag: 4.2
