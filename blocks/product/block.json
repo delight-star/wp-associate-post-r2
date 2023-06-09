@@ -3,9 +3,9 @@
   "apiVersion": 2,
   "name": "wp-associate-post-r2/product",
   "version": "1.0.0",
-  "title": "Product Link",
+  "title": "WP Associate Post R2",
   "category": "embed",
-  "description": "",
+  "description": "Embed product link for WP Associate Post R2.",
   "attributes": {
     "service": {
       "type": "string"
