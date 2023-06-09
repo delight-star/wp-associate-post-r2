@@ -65,18 +65,10 @@ class Main {
 		}
 
 		if ( function_exists( 'register_block_type' ) && ! is_null( $this->get_search_tab_id() ) ) {
-			add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_editor_assets') );
-			register_block_type('wp-associate-post-r2/product', array(
-				'attributes' => array(
-					'service' => array('type' => 'string'),
-					'id' => array('type' => 'string'),
-					'type' => array('type' => 'string'),
-					'title' => array('type' => 'string'),
-					'search' => array('type' => 'string'),
-					'css_class' => array('type' => 'string')
-				),
+			register_block_type( WPAP_PLUGIN_PATH . '/blocks/product', array(
 				'render_callback' => array($this, 'gutenberg_callback'),
-			));
+			) );
+			add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_editor_assets' ) );
 		}
 	}
 
@@ -168,13 +160,11 @@ class Main {
 	public function enqueue_block_editor_assets() {
 		add_thickbox();
 		$this->enqueue();
-		wp_enqueue_script( 'wpap-admin-gutenberg-block', WPAP_PLUGIN_URL . 'js/admin-gutenberg-block.js', array( 'wp-editor', 'wp-blocks', 'wp-element', 'wp-i18n', 'wp-components' ) );
-		wp_localize_script( 'wpap-admin-gutenberg-block', 'wpapBlockConfig', array(
-			'initTab' => $this->get_search_tab_id(),
+		$block_script_handle = generate_block_asset_handle( 'wp-associate-post-r2/product', 'editorScript' );
+		wp_localize_script( $block_script_handle, 'wpapBlockConfig', array(
+				'initTab' => $this->get_search_tab_id(),
 		) );
-		if ( function_exists( 'wp_set_script_translations' ) ) {
-			wp_set_script_translations( 'wpap-admin-gutenberg-block', 'wp-associate-post-r2' );
-		}
+		wp_set_script_translations( $block_script_handle, 'wp-associate-post-r2' );
 	}
 
 	public function gutenberg_callback($attributes) {

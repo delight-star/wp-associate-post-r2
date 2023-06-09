@@ -1,9 +1,9 @@
 === WP Associate Post R2 ===
 Contributors: delightstar, satonyan, cibea
 Tags: affiliate, amazon, rakuten, yahoo, media, post, links
-Requires at least: 4.6
+Requires at least: 5.8
 Tested up to: 5.3
-Requires PHP: 5.6
+Requires PHP: 7.0
 Stable tag: 4.2
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -17,8 +17,8 @@ Affiliate easy installation plugin. Contributing to the monetization of your blo
 
 In order to use "Amazon Product Advertising API", Amazon Associate access key and secret access key are necessary.
 
-- Requires WordPress Version 4.5
-- Requires PHP Version 5.6
+- Requires WordPress Version 5.8
+- Requires PHP Version 7.0
 
 ## This Plugin has the following functions to help improve the profitability of blog
 
