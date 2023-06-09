@@ -10,7 +10,8 @@
 	},
 	"homepage": "https://wp-ap.net/",
 	"scripts": {
-		"build:block": "wp-scripts build --webpack-src-dir=blocks/product/src --output-path=blocks/product"
+		"build:block": "wp-scripts build --webpack-src-dir=blocks/product/src --output-path=blocks/product",
+		"format": "wp-scripts format"
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^26.2.0",

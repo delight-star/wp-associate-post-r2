@@ -1,0 +1,3 @@
+/blocks/product/*
+!/blocks/product/src/
+/js/jquery.pjax.min.js
