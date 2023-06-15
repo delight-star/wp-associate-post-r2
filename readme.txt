@@ -2,9 +2,9 @@
 Contributors: delightstar, satonyan, cibea
 Tags: affiliate, amazon, rakuten, yahoo, media, post, links
 Requires at least: 5.8
-Tested up to: 5.3
+Tested up to: 6.2.2
 Requires PHP: 7.0
-Stable tag: 4.2
+Stable tag: 5.0.0
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Donate link: https://wp-ap.net/donation/
@@ -44,6 +44,10 @@ In order to use "Amazon Product Advertising API", Amazon Associate access key an
 3. Settings Page
 
 == Changelog ==
+
+= 5.0.0 =
+- Fixed block editor bug.
+- Eliminate loading of object-fit-images library.
 
 = 4.2 =
 - Fixed Amazon Product Advertising API error handling.
