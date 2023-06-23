@@ -1,0 +1,15 @@
+# Directories
+/.git export-ignore
+/.github export-ignore
+/.wordpress-org export-ignore
+/blocks/product/src export-ignore
+/node_modules export-ignore
+
+# Files
+/.gitattributes export-ignore
+/.editorconfig export-ignore
+/.gitignore export-ignore
+/.prettierignore export-ignore
+/package.json export-ignore
+/package-lock.json export-ignore
+/webpack.config.js export-ignore

@@ -4,11 +4,10 @@
 Plugin Name: WP Associate Post R2
 Description: Affiliate easy installation plugin. Works with Amazon Associates, Rakuten Affiliate, and ValueCommerce Affiliate for Yahoo Shopping. Contributing to the monetization of your blog.
 Plugin URI:  https://wp-ap.net/
-Version:     4.2
+Version:     5.0.0
 Author:      Delight Star Inc.
 Author URI:  https://delight-star.co.jp/
 License:     GPLv2
-Text Domain: wp-associate-post-r2
 */
 
 namespace WP_Associate_Post_R2;

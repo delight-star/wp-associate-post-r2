@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "wp-associate-post-r2/product",
+  "version": "1.0.0",
+  "title": "WP Associate Post R2",
+  "category": "embed",
+  "description": "Embed product link for WP Associate Post R2.",
+  "attributes": {
+    "service": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "css_class": {
+      "type": "string"
+    },
+    "search": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "customClassName": false,
+    "className": false,
+    "html": false,
+    "alignWide": false
+  },
+  "textdomain": "wp-associate-post-r2",
+  "editorScript": "file:./index.js"
+}
