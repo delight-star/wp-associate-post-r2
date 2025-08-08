@@ -63,16 +63,16 @@ class Main {
 			add_action( 'admin_menu', array( $this, 'admin_menu' ) );
 			add_action( 'admin_init', array( $this, 'admin_init' ) );
 		}
+	}
 
+	public function init() {
 		if ( function_exists( 'register_block_type' ) && ! is_null( $this->get_search_tab_id() ) ) {
 			register_block_type( WPAP_PLUGIN_PATH . '/blocks/product', array(
 				'render_callback' => array($this, 'gutenberg_callback'),
 			) );
 			add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_editor_assets' ) );
 		}
-	}
 
-	public function init() {
 		$this->template = new Template();
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
 		add_shortcode( WPAP_ID_ABBR, array( $this, 'shortcode' ) );
