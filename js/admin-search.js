@@ -246,7 +246,7 @@
 				'mouseenter',
 				'.wpap-link-rakuten, .wpap-link-yahoo',
 				function () {
-					var label = parent.wp.i18n.__(
+					var label = wp.i18n.__(
 						'In order to improve operating speed, Rakuten and Yahoo links can not be clicked from the preview screen.',
 						'wp-associate-post-r2'
 					);

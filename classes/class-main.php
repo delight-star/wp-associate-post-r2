@@ -140,6 +140,7 @@ class Main {
 		if ( 'settings_page_' . WPAP_ID === $hook ) {
 			wp_enqueue_style( 'wpap-admin-option', WPAP_PLUGIN_URL . 'css/admin-option.css', array(), WPAP_VERSION );
 			wp_enqueue_script( 'wpap-admin-option', WPAP_PLUGIN_URL . 'js/admin-option.js', array( 'wp-i18n', 'jquery' ), WPAP_VERSION, true );
+			wp_set_script_translations( 'wpap-admin-option', 'wp-associate-post-r2' );
 			wp_localize_script( 'wpap-admin-option', 'wpapOption', array(
 				'ajaxURL'       => admin_url( 'admin-ajax.php' ),
 				'nonce'         => wp_create_nonce( 'wpap_cache_clear' ),
@@ -150,6 +151,7 @@ class Main {
 			wp_enqueue_style( 'wpap-admin-search', WPAP_PLUGIN_URL . 'css/admin-search.css', array( 'font-awesome' ), WPAP_VERSION );
 			wp_enqueue_script( 'jquery-pjax', WPAP_PLUGIN_URL . 'js/jquery.pjax.min.js', array( 'jquery' ), null, true );
 			wp_enqueue_script( 'wpap-admin-search', WPAP_PLUGIN_URL . 'js/admin-search.js', array( 'wp-i18n', 'jquery', 'jquery-pjax' ), WPAP_VERSION, true );
+			wp_set_script_translations( 'wpap-admin-search', 'wp-associate-post-r2' );
 			wp_localize_script( 'wpap-admin-search', 'wpapSearch', array( 'isGutenberg' => $this->is_gutenberg_active() ) );
 			$this->enqueue();
 		} elseif ( in_array( $hook, array( 'post.php', 'post-new.php' ), true ) ) {
