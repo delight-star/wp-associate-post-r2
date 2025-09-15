@@ -70,6 +70,11 @@ class Main {
 			register_block_type( WPAP_PLUGIN_PATH . '/blocks/product', array(
 				'render_callback' => array($this, 'gutenberg_callback'),
 			) );
+			$block_script_handle = generate_block_asset_handle( 'wp-associate-post-r2/product', 'editorScript' );
+			wp_set_script_translations( $block_script_handle, 'wp-associate-post-r2' );
+			wp_localize_script( $block_script_handle, 'wpapBlockConfig', array(
+				'initTab' => $this->get_search_tab_id(),
+			) );
 			add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_editor_assets' ) );
 		}
 
@@ -162,11 +167,6 @@ class Main {
 	public function enqueue_block_editor_assets() {
 		add_thickbox();
 		$this->enqueue();
-		$block_script_handle = generate_block_asset_handle( 'wp-associate-post-r2/product', 'editorScript' );
-		wp_localize_script( $block_script_handle, 'wpapBlockConfig', array(
-				'initTab' => $this->get_search_tab_id(),
-		) );
-		wp_set_script_translations( $block_script_handle, 'wp-associate-post-r2' );
 	}
 
 	public function gutenberg_callback($attributes) {

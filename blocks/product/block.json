@@ -33,5 +33,5 @@
     "alignWide": false
   },
   "textdomain": "wp-associate-post-r2",
-  "editorScript": "file:./index.js"
+  "editorScript": "file:index.js"
 }
