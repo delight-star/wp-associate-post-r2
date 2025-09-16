@@ -48,7 +48,7 @@ class Cache {
 
 	public function save( $key, $data, $life_time = '1 day' ) {
 		// 作成日時・有効期限を設定
-		$datetime         = new DateTime( null, new DateTimeZone( 'UTC' ) );
+		$datetime         = new DateTime( 'now', new DateTimeZone( 'UTC' ) );
 		$created_datetime = $datetime->format( 'Y-m-d H:i:s' );
 		$expire_datetime  = $datetime->add( DateInterval::createFromDateString( $life_time ) )->format( 'Y-m-d H:i:s' );
 		$serialize_data   = json_encode( $data );
@@ -64,7 +64,7 @@ class Cache {
 	}
 
 	public function clean() {
-		$datetime     = new DateTime( null, new DateTimeZone( 'UTC' ) );
+		$datetime     = new DateTime( 'now', new DateTimeZone( 'UTC' ) );
 		$now_datetime = $datetime->format( 'Y-m-d H:i:s' );
 		$sql          = $this->wpdb->prepare( "DELETE FROM $this->table WHERE expire_date_gmt < %s;", $now_datetime ); // WPCS: unprepared SQL OK
 		$this->wpdb->query( $sql ); // WPCS: unprepared SQL OK
