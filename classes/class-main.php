@@ -574,12 +574,12 @@ class Main {
 									'wp-associate-post-r2'
 								),
 								number_format_i18n( $item_total ),
-								mb_strimwidth( $query_keyword, 0, 60, '...' )
+								esc_html( mb_strimwidth( $query_keyword, 0, 60, '...' ) )
 							);
 						} else {
 							printf(
 								__( 'Result for "%s"', 'wp-associate-post-r2' ),
-								mb_strimwidth( $query_keyword, 0, 60, '...' )
+								esc_html( mb_strimwidth( $query_keyword, 0, 60, '...' ) )
 							);
 						} ?>
 					</h1>

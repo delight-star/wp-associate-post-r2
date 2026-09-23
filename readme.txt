@@ -2,9 +2,9 @@
 Contributors: delightstar, satonyan, cibea
 Tags: affiliate, amazon, rakuten, yahoo, media, post, links
 Requires at least: 5.8
-Tested up to: 6.8.2
+Tested up to: 7.1.2
 Requires PHP: 7.3
-Stable tag: 5.0.1
+Stable tag: 5.0.2
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Donate link: https://wp-ap.net/donation/
@@ -44,6 +44,9 @@ In order to use "Amazon Product Advertising API", Amazon Associate access key an
 3. Settings Page
 
 == Changelog ==
+
+= 5.0.2 =
+- Fixed Cross Site Scripting vulnerabilities.
 
 = 5.0.1 =
 - Minimum required PHP version increased from 7.0 to 7.3.
