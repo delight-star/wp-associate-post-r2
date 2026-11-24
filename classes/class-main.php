@@ -414,24 +414,22 @@ class Main {
 	}
 
 	private function media_upload_header() {
-		ob_start();
-		media_upload_header();
-		$html = ob_get_contents();
-		ob_end_clean();
-
-		$parameter = $_GET;
-		unset( $parameter['type'] );
-		unset( $parameter['tab'] );
-		unset( $parameter['post_id'] );
-		unset( $parameter['q_kw'] );
-
-		foreach ( $parameter as $key => $value ) {
-			$html = str_replace( urlencode( $key ) . '=' . urlencode( $value ), '', $html );
+		$request_uri = isset( $_SERVER['REQUEST_URI'] ) ? $_SERVER['REQUEST_URI'] : '';
+		$path        = wp_parse_url( $request_uri, PHP_URL_PATH );
+		if ( ! is_string( $path ) || '' === $path ) {
+			$path = wp_parse_url( admin_url( 'media-upload.php' ), PHP_URL_PATH );
 		}
 
-		$html = preg_replace( array( '/(&#038;)+/', "/(&#038;')/" ), array( '&#038;', "'" ), $html );
+		$parameter = array();
+		foreach ( array( 'type', 'tab', 'post_id', 'q_kw' ) as $key ) {
+			if ( isset( $_GET[ $key ] ) && is_scalar( $_GET[ $key ] ) ) {
+				$parameter[ $key ] = (string) $_GET[ $key ];
+			}
+		}
 
-		echo $html;
+		$_SERVER['REQUEST_URI'] = $path . ( empty( $parameter ) ? '' : '?' . http_build_query( $parameter, '', '&', PHP_QUERY_RFC3986 ) );
+		media_upload_header();
+		$_SERVER['REQUEST_URI'] = $request_uri;
 	}
 
 	private function item_search( $service ) {
